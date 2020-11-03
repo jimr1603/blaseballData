@@ -28,7 +28,7 @@ all_events <- function(season) {
 #' @export
 
 events <- function(playerId = NULL,
-                   gameID = NULL,
+                   gameId = NULL,
                    pitcherId = NULL,
                    batterId = NULL,
                    type = NULL,
@@ -36,10 +36,9 @@ events <- function(playerId = NULL,
                    baseRunners = TRUE,
                    sortBy = NULL,
                    sortDirection = "ASC") {
-  assertthat::assert_that(!all(is.null(playerId, gameId, pitcherId, batterId)),
+  assertthat::assert_that(!is.null(c(playerId, gameId, pitcherId, batterId)),
     msg = "At least one of playerId, gameId, pitcherId and batterId must be specified"
   )
-  # TODO: check what happens when other args are left undefined.
 
   get_request("events", list(
     playerId = playerId,
@@ -99,7 +98,7 @@ player_info <- function(playerId = NULL,
                         name = NULL,
                         slug = NULL,
                         all = FALSE) {
-  assertthat::assert_that(!all(is.null(c(playerId, name, slug))), msg = "You must identify the player by ID, name or slug")
+  assertthat::assert_that(!is.null(c(playerId, name, slug)), msg = "You must identify the player by ID, name or slug")
   get_request("playerInfo", list(
     playerId = playerId,
     name = name,
@@ -126,7 +125,9 @@ tagged_players <- function() {
 #' @export
 
 current_roster <- function(teamId = NULL, slug = NULL) {
-  assertthat::assert_that(!all(is.null(c(teamId, slug))), "You need to speficy the team by ID or slug")
+  assertthat::assert_that(any(!is.null(teamId), !is.null(slug)),
+    msg = "You need to speficy the team by ID or slug"
+  )
   get_request("currentRoster", list(teamId = teamId, slug = slug))
 }
 
@@ -193,7 +194,7 @@ season_leaders <- function(season,
                            order = "ASC",
                            limit = NULL) {
   assertthat::is.number(season)
-  assertthat::assert_that(order %in% c("ASC", "DSC")) # TODO do this for all ORDER args.
+  assertthat::assert_that(order %in% c("ASC", "DSC"))
 
   season <- season - 1 # Convert to 0-indexing for the API.
 
