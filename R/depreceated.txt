@@ -1,0 +1,121 @@
+ROXYGEN skeletons for the depreciated stats. Just in case we want to implement them
+
+#' Get categorical statistics for the given players
+#'
+#' @param category string either 'batting' or 'pitching'
+#' @param season number (optional) season to get stats for
+#' @param playerIds string comma-separated list of player IDs
+#' @return list of player statistics
+#' @export
+
+#TODO: this one will need special thought in dealing with playerIds
+
+#' Calculate plate appearances for each batter.
+#'
+#' @param batterId string The ID of the batter by which to filter.
+#' @return The number of plate appearances for each batter and the total count of relevant batters.
+#' @export
+
+
+
+#' Calculate at-bats for each batter.
+#'
+#' @param batterId string The ID of the batter by which to filter.
+#' @return The number of at
+#' @export
+
+
+
+#' Calculate number of hits for each batter.
+#'
+#' @param batterId string The ID of the batter by which to filter.
+#' @return The number of hits for each batter and the total count of relevant batters.
+#' @export
+
+
+
+#' Calculate number of times on base for each batter.
+#'
+#' @param batterId string The ID of the batter by which to filter.
+#' @return The number of times each batter got on base and the total count of relevant batters.
+#' @export
+
+
+
+#' Calculate batting average of each batter.
+#'
+#' @param batterId string The ID of the batter by which to filter.
+#' @return The batting average of each batter and the total count of relevant batters.
+#' @export
+
+
+
+#' Calculate OBP of each batter.
+#'
+#' @param batterId string The ID of the batter by which to filter.
+#' @return The OBP of each batter and the total count of relevant batters.
+#' @export
+
+
+
+#' Calculate OPS of each batter.
+#'
+#' @param batterId string The ID of the batter by which to filter.
+#' @return The OPS of each batter and the total count of relevant batters.
+#' @export
+
+
+
+#' Calculate SLG of each batter.
+#'
+#' @param batterId string The ID of the batter by which to filter.
+#' @return The SLG of each batter and the total count of relevant batters.
+#' @export
+
+
+
+#' Calculate number of outs recorded by each pitcher.
+#'
+#' @param pitcherId string The ID of the pitcher by which to filter.
+#' @return The number of outs recorded by each pitcher and the total count of relevant pitchers.
+#' @export
+
+
+
+#' Calculate number of hits recorded by each pitcher.
+#'
+#' @param pitcherId string The ID of the pitcher by which to filter.
+#' @return The number of hits recorded by each pitcher and the total count of relevant pitchers.
+#' @export
+
+
+
+#' Calculate number of walks recorded by each pitcher.
+#'
+#' @param pitcherId string The ID of the pitcher by which to filter.
+#' @return The number of walks recorded by each pitcher and the total count of relevant pitchers.
+#' @export
+
+
+
+#' Calculate the number of runs earned by each pitcher.
+#'
+#' @param pitcherId string The ID of the pitcher by which to filter.
+#' @return The number of runs earned  by each pitcher and the total count of relevant pitchers.
+#' @export
+
+
+
+#' Calculate WHIP of each pitcher.
+#'
+#' @param pitcherId string The ID of the pitcher by which to filter.
+#' @return The WHIP of each pitcher and the total count of relevant pitchers.
+#' @export
+
+
+
+#' Calculate ERA of each pitcher.
+#'
+#' @param pitcherId string The ID of the pitcher by which to filter.
+#' @return The ERA of each pitcher and the total count of relevant pitchers.
+#' @export

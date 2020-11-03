@@ -2,13 +2,13 @@
 % Please edit documentation in R/fetchers.R
 \name{all_teams}
 \alias{all_teams}
-\title{Gets all current teams.}
+\title{Get the list of all current teams}
 \usage{
 all_teams()
 }
 \value{
-data.frame of the current blaseball teams.
+list of current teams
 }
 \description{
-Gets all current teams.
+Get the list of all current teams
 }
