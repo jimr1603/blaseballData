@@ -8,6 +8,10 @@ user_agent <- httr::user_agent("https://github.com/jimr1603/blaseballData")
 #' @return data from the server, as a data.frame. Or a HTTP error.
 
 get_request <- function(path, query = NULL) {
+  for (i in seq_along(query)) { # Validate that each argument is length 1.
+    assertthat::assert_that(length(query[[i]]) <= 1, msg = paste(names(query)[i], "must be length 1"))
+  }
+
   response <- httr::GET(
     url = paste0(base_url, path),
     query = query,
