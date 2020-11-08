@@ -10,7 +10,7 @@ all_events(season)
 \item{season}{number season to get event data for}
 }
 \value{
-A JSON file with the raw event data.
+A list of data.frames with the raw event data.
 }
 \description{
 Download all raw event data.

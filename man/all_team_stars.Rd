@@ -7,7 +7,7 @@
 all_team_stars()
 }
 \value{
-list of current team stars
+data.frame of current team stars
 }
 \description{
 Get current star values for all teams

@@ -10,7 +10,7 @@ all_players(includeShadows = FALSE)
 \item{includeShadows}{boolean whether to include players in the Shadows}
 }
 \value{
-list of players
+data.frame of players
 }
 \description{
 Get the list of all current players, optionally including players in the Shadows

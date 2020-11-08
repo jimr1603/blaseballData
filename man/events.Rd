@@ -6,7 +6,7 @@
 \usage{
 events(
   playerId = NULL,
-  gameID = NULL,
+  gameId = NULL,
   pitcherId = NULL,
   batterId = NULL,
   type = NULL,
@@ -18,6 +18,8 @@ events(
 }
 \arguments{
 \item{playerId}{string The ID of a player that must be the batter or the pitcher in each event.}
+
+\item{gameId}{string The ID of the game by which to filter results.}
 
 \item{pitcherId}{string The ID of the pitcher that must be in each event.}
 
@@ -32,8 +34,6 @@ events(
 \item{sortBy}{string The field by which to sort. Most text and numeric columns are supported.}
 
 \item{sortDirection}{string The direction by which to sort. Must be one of ASC, DESC.}
-
-\item{gameId}{string The ID of the game by which to filter results.}
 }
 \value{
 The events that match the query and the number of matching events.

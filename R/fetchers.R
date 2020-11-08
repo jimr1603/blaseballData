@@ -3,7 +3,7 @@
 #' Download all raw event data.
 #'
 #' @param season number season to get event data for
-#' @return A JSON file with the raw event data.
+#' @return A list of data.frames with the raw event data.
 #' @export
 
 all_events <- function(season) {
@@ -134,7 +134,7 @@ current_roster <- function(teamId = NULL, slug = NULL) {
 #' Get the list of all current players, optionally including players in the Shadows
 #'
 #' @param includeShadows boolean whether to include players in the Shadows
-#' @return list of players
+#' @return data.frame of players
 #' @export
 
 all_players <- function(includeShadows = FALSE) {
@@ -160,7 +160,7 @@ all_players_for_gameday <- function(season, day) {
 #' Get the list of all current teams
 #'
 
-#' @return list of current teams
+#' @return data.frane of current teams
 #' @export
 
 all_teams <- function() {
@@ -171,7 +171,7 @@ all_teams <- function() {
 #' Get current star values for all teams
 #'
 
-#' @return list of current team stars
+#' @return data.frame of current team stars
 #' @export
 
 all_team_stars <- function() {
@@ -185,7 +185,7 @@ all_team_stars <- function() {
 #' @param stat string Stat to get the leaders for (as returned from /playerStats)
 #' @param order string Ordering to use for ranking (ASC or DESC)
 #' @param limit number Number of leaders to return
-#' @return list of leaders
+#' @return data.frame of leaders
 #' @export
 
 season_leaders <- function(season,

@@ -24,7 +24,7 @@ season_leaders(
 \item{limit}{number Number of leaders to return}
 }
 \value{
-list of leaders
+data.frame of leaders
 }
 \description{
 Get the season leaders for a given category and stat

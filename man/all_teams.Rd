@@ -7,7 +7,7 @@
 all_teams()
 }
 \value{
-list of current teams
+data.frane of current teams
 }
 \description{
 Get the list of all current teams
